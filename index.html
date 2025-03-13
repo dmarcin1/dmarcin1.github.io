@@ -124,13 +124,14 @@
 
 <hr>
 <h1 id="4-配置-HEXO"><a href="#4-配置-HEXO" class="headerlink" title="4. 配置 HEXO"></a>4. 配置 HEXO</h1><p>在电脑中找一个盘，创建一个文件夹（例如 <code>blog</code>），然后右键点击该文件夹，在弹出的菜单中选择 <strong>“Open Git Bash here”</strong>。</p>
-<p><img src="/Pasted%20image%2020250313123723.png" alt="打开 Git Bash"></p>
+<p><img src="/images/Pasted%20image%202020250313123723.png" alt="打开 Git Bash"></p>
 <p>然后在 Git Bash 的命令行中输入以下命令，等待安装完成：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 hexo-cli</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"><span class="comment"># 初始化项目</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 安装自动部署工具</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h1 id="5-上传到-GitHub"><a href="#5-上传到-GitHub" class="headerlink" title="5. 上传到 GitHub"></a>5. 上传到 GitHub</h1><p>打开刚才的 <code>blog</code> 文件夹，找到 <code>_config.yml</code> 文件，用记事本或代码编辑器打开，编辑以下内容：</p>
-<p><img src="/Pasted%20image%2020250313124353.png" alt="编辑配置文件"></p>
+
+
 <p>注意：<code>repository</code> 要配置成 SSH 格式（如 <code>git@github.com:xxx/xxx.github.io.git</code>），如果配置成 HTTPS 可能会导致上传失败。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:dmarcin1/dmarcin1.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
 
